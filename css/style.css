@@ -100,6 +100,7 @@ h6 {
 
 #header #logo {
   float: left;
+  
 }
 
 #header #logo h1 {
@@ -119,8 +120,12 @@ h6 {
 }
 
 #header #logo img {
+  margin-top: 0px;
+  top: ;
   padding: 0;
   margin: 0;
+  width: 300px;
+  
 }
 
 #header.header-fixed {
@@ -183,14 +188,18 @@ h6 {
   font-size: 48px;
   font-weight: 700;
   line-height: 56px;
-  text-transform: uppercase;
   color: #fff;
+  font-style: oblique;
+  font-family: serif;
+  color: #fff;
+  text-shadow: 4px 4px 3px rgba(0,0,0,0.1); 
 }
 
 #hero h2 {
   color: #eee;
   margin-bottom: 50px;
   font-size: 24px;
+  font-style: italic;
 }
 
 #hero .btn-get-started {
@@ -494,7 +503,7 @@ body.mobile-nav-active #mobile-nav-toggle {
 
 #about .about-container .background {
   min-height: 300px;
-  background: url(../img/about-img.jpg) center top no-repeat;
+  background: url(https://media.gettyimages.com/photos/family-of-three-on-white-picture-id157525887?b=1&k=6&m=157525887&s=612x612&w=0&h=_muXbRF-qwgUrj9dYfg2-VpUTpR1YigMLyUl0KKteoU=) center top no-repeat;
   margin-bottom: 10px;
 }
 
@@ -678,6 +687,10 @@ body.mobile-nav-active #mobile-nav-toggle {
 #services .description {
   font-size: 14px;
   line-height: 24px;
+}
+
+.servicetitle  {
+color: #111;
 }
 
 /* Call To Action Section
