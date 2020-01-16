@@ -503,7 +503,8 @@ body.mobile-nav-active #mobile-nav-toggle {
 
 #about .about-container .background {
   min-height: 300px;
-  background: url(https://media.gettyimages.com/photos/family-of-three-on-white-picture-id157525887?b=1&k=6&m=157525887&s=612x612&w=0&h=_muXbRF-qwgUrj9dYfg2-VpUTpR1YigMLyUl0KKteoU=) center top no-repeat;
+  max-width: 1000px;
+  background: url(https://mail.google.com/mail/u/0?ui=2&ik=b1ee27af67&attid=0.1&permmsgid=msg-f:1655919227750167867&th=16fb01c3a2c9b53b&view=att&disp=safe) center top no-repeat;
   margin-bottom: 10px;
 }
 
