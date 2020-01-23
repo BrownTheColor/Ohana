@@ -43,11 +43,15 @@
     <div class="container">
 
       <div id="logo" class="pull-left"> 
-       <!-- <a href="#hero"><img src="https://mail.google.com/mail/u/0?ui=2&ik=b1ee27af67&attid=0.1&permmsgid=msg-f:1655374965287378999&th=16f912c2a8076037&view=fimg&sz=s0-l75-ft&attbid=ANGjdJ9f9G1RSZ7JMDgSheHYA4O_Xynua-5juTMhc-EGO0SpwNqISHlfgNhA_qI9IQi5FCd5yOPMacb2FCCuyjwhlzuNsOKZZ5VBKWmbqPx3vETzXReGwgofq705Jzs&disp=emb&realattid=5c52d50e91238bf8_0.1.1" alt="" title="" /></img></a> -->
+      <!-- <a href="#hero"><img src="https://mail.google.com/mail/u/0?ui=2&ik=b1ee27af67&attid=0.1&permmsgid=msg-f:1655374965287378999&th=16f912c2a8076037&view=fimg&sz=s0-l75-ft&attbid=ANGjdJ9f9G1RSZ7JMDgSheHYA4O_Xynua-5juTMhc-EGO0SpwNqISHlfgNhA_qI9IQi5FCd5yOPMacb2FCCuyjwhlzuNsOKZZ5VBKWmbqPx3vETzXReGwgofq705Jzs&disp=emb&realattid=5c52d50e91238bf8_0.1.1" alt="" title="" /></img></a> -->
         <!-- Uncomment below if you prefer to use a text logo -->
         <!--<h1><a href="#hero">Ohana</a></h1> -->
       </div>
-
+      <a class="navbar-brand" href="#hero">
+      <div class="logo-image">
+        <img src="https://lh3.googleusercontent.com/Tg2ftz5Yeu8KAqwqTYkMA0x8kIn964klHewidgw9xEnNhBWQPhA0xVNXVKOdS05pS7BLsPAv1IXqljTfwHaUfmGvsulEROSCtjNBdYPcxG2_4mw5Uomhs17CviA9RgOKeElFH4d7WeD3jUcVuMg_rPswC5c350DTJ33oPsXloOFKifmM1eOE6n3bSsiB8wE7MVhvMOEi9UBXniATrcfiba0XAeHijyDEubx4PtEEXAQAA9Zj60Iov4CwKlYXgUn7R0BX0R5n_eeZBqaVG47jd_Dp8QD2Ou14TYM6XHCTKzFVWUW75biHbIeRRiI3WAZd1QiXdnFGPdOUWFuG2-qMkon5WGuTXxapzv2jJCCP5XeEAFgyssnxMVAAuO5Ed4ZgHoeWGq8XO0kf8CyPbX3c-HIWPfedcIGA5t8QinkNKXmwwzpqKltTYKq66I8CIWkdXpeepK97pgSmWkrUopEbSMeTvtry8meCbpptEgzaki4bhoBDZyULhKy1-05whO2VUUo5e3-GiuQR0gGjLwhM13ebYGmqVl36CIQA2Ienzz064ClB3AoceXa6nTwo-XUd6_tPIbeeu_M6x4VNjn8zte7oA0qx4okNjfmlxpFi-zLoLKh3GuFTiDh5L2_KKdtQa3Dm5VINEYj5S8yS7czewOedY1o10v-3nJWwZQTt2L-iVgqsNztL_Do=w638-h221-no" class="img-fluid">
+  </div>
+</a>
       <nav id="nav-menu-container">
         <ul class="nav-menu">
           <li class="menu-active"><a href="#hero">Home</a></li>
@@ -245,8 +249,9 @@
             </div>
 
           </div>
+        
 
-          <div class="col-lg-5 col-md-8">
+         <div class="col-lg-5 col-md-8">
             <div class="form">
               <div id="sendmessage">Your message has been sent. Thank you!</div>
               <div id="errormessage"></div>
@@ -267,14 +272,46 @@
                   <textarea class="form-control" name="message" rows="5" data-rule="required" data-msg="Please write something for us" placeholder="Message"></textarea>
                   <div class="validation"></div>
                 </div>
-                <div class="text-center"><button type="submit">Send Message</button></div>
+                  <center>
+                    <a href="mailto:amera@ohanabehavioral.com?Subject=Hello%20again" class="btn btn-primary btn-lg active" role="button" aria-pressed="true">Send Us An Email</a>
+                </center>
               </form>
             </div>
           </div>
 
         </div>
 
-      </div>
+      </div> 
+       <!--php form to email code-->
+<!--
+      <?php
+
+      $to = 'myself@myemail.com';
+      
+      $subject = 'HTML Form in HTML Email';
+      
+      $headers = "From: myself@myemail.com\r\n";
+      $headers .= "MIME-Version: 1.0\r\n";
+      $headers .= "Content-Type: text/html; charset=ISO-8859-1\r\n";
+      
+      $message = '<html><body>';
+      $message .= '<form action="http://mysite.com/process.php" method="post" target="_blank">';
+      $message .= '<label>How did you like the movie <strong>Turfnuts</strong>?</label><br />';
+      $message .= '<input name="rating" type="radio" /> ★☆☆☆<br />';
+      $message .= '<input name="rating" type="radio" /> ★★☆☆<br />';
+      $message .= '<input name="rating" type="radio" /> ★★★☆<br />';
+      $message .= '<input name="rating" type="radio" /> ★★★★<br />';
+      $message .= '<br />';
+      $message .= '<label for="commentText">Leave a quick review:</label><br />';
+      $message .= '<textarea cols="75" name="commentText" rows="5"></textarea><br />';
+      $message .= '<br />';
+      $message .= '<input type="submit" value="Submit your review" />&nbsp;</form>';
+      $message .= '</body></html>';
+      
+      mail($to, $subject, $message, $headers);
+      
+      ?>
+      -->
     </section><!-- #contact -->
 <br>
     <center>
@@ -325,3 +362,4 @@
 
 </body>
 </html>
+
